@@ -5,7 +5,7 @@ const frameMetadata = getFrameMetadata({
   buttons: [
       {label: 'Click to unlock', action: 'post_redirect'}
   ],
-  image: 'https://redirect-frame.vercel.app/video.png',
+  image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
   post_url: 'https://magnificent-panda-f599db.netlify.app/api/frame',
 });
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <img src={'/video.png'}/>
+      <img src={'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png'}/>
     </>
   );
 }
