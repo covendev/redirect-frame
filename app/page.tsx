@@ -6,7 +6,7 @@ const frameMetadata = getFrameMetadata({
       {label: 'Click to unlock', action: 'post_redirect'}
   ],
   image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
-  post_url: 'https://magnificent-panda-f599db.netlify.app/api/frame',
+  post_url: 'https://folklore-frame.netlify.app/api/frame',
 });
 
 export const metadata: Metadata = {
