@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-      {label: 'Grab your tickets!', action: 'post_redirect'}
+      {label: 'Grab your tickets now!', action: 'post_redirect'}
   ],
   image: 'https://cdn.tokenproof.xyz/assets/36be39d9-b1d8-4fc1-8278-20b77cc9ab72/event_page_banner/3c4e536e-2b0b-494a-855d-3f9407facb7b.png',
   post_url: 'https://shefi-ethdenver-tix.netlify.app/api/frame',
