@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-      {label: 'Click to unlock', action: 'post_redirect'}
+      {label: 'Explore ARK', action: 'post_redirect'}
   ],
   image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
   post_url: 'https://folklore-frame.netlify.app/api/frame',
