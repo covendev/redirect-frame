@@ -6,7 +6,7 @@ export default function RedirectPage() {
     const router = useRouter();
 
     useEffect(() => {
-        const youtubeUrl = 'https://folklore-cms.vercel.app/entries';
+        const youtubeUrl = 'https://folklore-cms.vercel.app';
 
         // Perform the redirect
         window.location.href = youtubeUrl; // For a full page reload redirect
