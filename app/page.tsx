@@ -5,7 +5,7 @@ const frameMetadata = getFrameMetadata({
   buttons: [
       {label: 'Join SheFi!', action: 'post_redirect'}
   ],
-  image: 'https://pbs.twimg.com/profile_banners/1210289817487073281/1703255944/1500x500',
+  image: 'https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium',
   post_url: 'https://shefi-s10--shefis10-registration.netlify.app/api/frame',
 });
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Redirect frame',
     description: 'LFG',
-    images: ['https://pbs.twimg.com/profile_banners/1210289817487073281/1703255944/1500x500'],
+    images: ['https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium'],
   },
   other: {
     ...frameMetadata,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <img src={'https://pbs.twimg.com/profile_banners/1210289817487073281/1703255944/1500x500'}/>
+      <img src={'https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium'}/>
     </>
   );
 }
