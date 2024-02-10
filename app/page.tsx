@@ -6,7 +6,7 @@ const frameMetadata = getFrameMetadata({
       {label: 'Join SheFi!', action: 'post_redirect'}
   ],
   image: 'https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium',
-  post_url: 'https://shefi-s10--shefis10-registration.netlify.app/api/frame',
+  post_url: 'https://shefis10-registration.netlify.app/api/frame',
 });
 
 export const metadata: Metadata = {
