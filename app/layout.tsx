@@ -1,6 +1,6 @@
 export const viewport = {
-  width: 506,
-  height: 264,
+  width: 'device-width',
+  height: 'calc(device-width / 1.91)', // Set the height based on a 1.91:1 aspect ratio
   initialScale: 1.0,
 };
 
