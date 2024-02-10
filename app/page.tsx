@@ -5,7 +5,7 @@ const frameMetadata = getFrameMetadata({
   buttons: [
       {label: 'Join SheFi!', action: 'post_redirect'}
   ],
-  image: 'https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium',
+  image: 'https://shefis10-registration.netlify.app/Screenshot 2024-02-10 at 6.50.49 PM.png',
   post_url: 'https://shefis10-registration.netlify.app/api/frame',
 });
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Redirect frame',
     description: 'LFG',
-    images: ['https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium'],
+    images: ['https://shefis10-registration.netlify.app/Screenshot 2024-02-10 at 6.50.49 PM.png'],
   },
   other: {
     ...frameMetadata,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <img src={'https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium'}/>
+      <img src={'/Screenshot 2024-02-10 at 6.50.49 PM.png'}/>
     </>
   );
 }
