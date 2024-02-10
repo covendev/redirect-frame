@@ -1,6 +1,6 @@
 export const viewport = {
-  width: 'device-width',
-  height: 'device-width', // Set both width and height to 'device-width' to maintain a 1:1 aspect ratio
+  width: 506,
+  height: 264,
   initialScale: 1.0,
 };
 
