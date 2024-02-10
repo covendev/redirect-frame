@@ -3,10 +3,10 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-      {label: 'Join the Lore!', action: 'post_redirect'}
+      {label: 'Join SheFi!', action: 'post_redirect'}
   ],
   image: 'https://pbs.twimg.com/media/GFlqX6EbsAA1OT4?format=jpg&name=medium',
-  post_url: 'https://folklore-frame.netlify.app/api/frame',
+  post_url: 'https://shefi-s10--shefis10-registration.netlify.app/api/frame',
 });
 
 export const metadata: Metadata = {
