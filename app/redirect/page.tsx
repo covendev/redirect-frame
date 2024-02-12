@@ -1,7 +1,12 @@
+// components/RedirectPage.tsx
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function RedirectPage({ redirectUrl }) {
+interface RedirectPageProps {
+  redirectUrl: string;
+}
+
+export default function RedirectPage({ redirectUrl }: RedirectPageProps) {
     const router = useRouter();
 
     useEffect(() => {
