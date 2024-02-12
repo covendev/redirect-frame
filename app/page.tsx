@@ -5,8 +5,8 @@ const frameMetadata = getFrameMetadata({
   buttons: [
       {label: 'Join SheFi!', action: 'post_redirect'}
   ],
-  image: 'https://images.mirror-media.xyz/publication-images/public/IMG_8225.JPG',
-  post_url: 'https://folklore-frame.netlify.app/api/frame',
+  image: 'https://shefivalentines.netlify.app/IMG_8225.JPG',
+  post_url: 'https://shefivalentines.netlify.app/api/frame',
 });
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Redirect frame',
     description: 'LFG',
-    images: ['https://images.mirror-media.xyz/publication-images/public/IMG_8225.JPG'],
+    images: ['https://shefivalentines.netlify.app/IMG_8225.JPG'],
   },
   other: {
     ...frameMetadata,
