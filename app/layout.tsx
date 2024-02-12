@@ -1,5 +1,5 @@
 export const viewport = {
-  width: 'device-width',
+  width: 'device-length',
   initialScale: 1.0,
 };
 
