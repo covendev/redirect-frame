@@ -1,18 +1,15 @@
-'use client';
-import {useRouter} from "next/navigation";
-import {useEffect} from "react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export default function RedirectPage() {
+export default function RedirectPage({ redirectUrl }) {
     const router = useRouter();
 
     useEffect(() => {
-        const youtubeUrl = 'https://folklore-cms.vercel.app';
-
-        // Perform the redirect
-        window.location.href = youtubeUrl; // For a full page reload redirect
-        // Or use Next.js router for client-side redirect (comment out the line above if using this)
-        // router.push(youtubeUrl);
-    }, [router]);
+        if (redirectUrl) {
+            // Perform the redirect
+            router.push(redirectUrl); // For client-side redirect
+        }
+    }, [redirectUrl, router]);
 
     return (
         <div>
