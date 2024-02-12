@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-      {label: 'Join the Lore!', action: 'post_redirect'}
+      {label: 'Join SheFi!', action: 'post_redirect'}
   ],
   image: 'https://images.mirror-media.xyz/publication-images/public/IMG_8225.JPG',
   post_url: 'https://folklore-frame.netlify.app/api/frame',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <img src={'/public/IMG_8225.JPG'}/>
+      <img src={'/IMG_8225.JPG'}/>
     </>
   );
 }
