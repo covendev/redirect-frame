@@ -1,15 +1,14 @@
-import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function RedirectPage({ redirectUrl }) {
-    const router = useRouter();
-
     useEffect(() => {
         if (redirectUrl) {
             // Perform the redirect
-            router.push(redirectUrl); // For client-side redirect
+            window.location.href = redirectUrl; // For a full page reload redirect
+            // Or use Next.js router for client-side redirect (comment out the line above if using this)
+            // router.push(redirectUrl);
         }
-    }, [redirectUrl, router]);
+    }, [redirectUrl]);
 
     return (
         <div>
