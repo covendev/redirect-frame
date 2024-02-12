@@ -5,7 +5,7 @@ const frameMetadata = getFrameMetadata({
   buttons: [
       {label: 'Join the Lore!', action: 'post_redirect'}
   ],
-  image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
+  image: 'https://images.mirror-media.xyz/publication-images/public/IMG_8225.JPG',
   post_url: 'https://folklore-frame.netlify.app/api/frame',
 });
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Redirect frame',
     description: 'LFG',
-    images: ['https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png'],
+    images: ['https://images.mirror-media.xyz/publication-images/public/IMG_8225.JPG'],
   },
   other: {
     ...frameMetadata,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <img src={'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png'}/>
+      <img src={'/public/IMG_8225.JPG'}/>
     </>
   );
 }
