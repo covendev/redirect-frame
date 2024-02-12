@@ -4,10 +4,11 @@ import type { Metadata } from 'next';
 export default function Page() {
   const frameMetadata = getFrameMetadata({
     buttons: [
-      { label: 'Button 1', action: 'https://example.com/1' },
-      { label: 'Button 2', action: 'https://example.com/2' },
-      { label: 'Button 3', action: 'https://example.com/3' },
-      { label: 'Button 4', action: 'https://example.com/4' }
+      { label: 'Learn', action: 'https://folklore.insitute' },
+      { label: 'RSS', action: 'entries.folklore.institue' },
+      { label: 'Join Telegram', action: 'https://t.me/folklore_0x' },
+      { label: 'Membership', action: 'https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96
+' }
     ],
     image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
     post_url: 'https://folklore-frame.netlify.app/api/frame',
