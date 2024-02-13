@@ -1,38 +1,35 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { useClient } from 'next/client';
 
 export default function RedirectPage() {
-  const router = useRouter();
-  useClient(); // Mark this component as a client-side component
+    const router = useRouter();
 
-  useEffect(() => {
-    const { action } = router.query;
+    useEffect(() => {
+        const { redirectUrl } = router.query;
+        
+        // Default redirect URL
+        let finalRedirectUrl = 'https://folklore-cms.vercel.app';
 
-    // Perform the redirect based on the action
-    switch (action) {
-      case 'post_redirect_1':
-        window.location.href = 'https://redirect-url-for-button-1.com';
-        break;
-      case 'post_redirect_2':
-        window.location.href = 'https://redirect-url-for-button-2.com';
-        break;
-      case 'post_redirect_3':
-        window.location.href = 'https://redirect-url-for-button-3.com';
-        break;
-      case 'post_redirect_4':
-        window.location.href = 'https://redirect-url-for-button-4.com';
-        break;
-      default:
-        // Redirect to a default URL if action is not recognized
-        window.location.href = 'https://default-redirect-url.com';
-        break;
-    }
-  }, [router]);
+        // Choose the redirect URL based on the provided query parameter
+        if (redirectUrl === 'button1') {
+            finalRedirectUrl = 'https://example.com/button1';
+        } else if (redirectUrl === 'button2') {
+            finalRedirectUrl = 'https://example.com/button2';
+        } else if (redirectUrl === 'button3') {
+            finalRedirectUrl = 'https://example.com/button3';
+        } else if (redirectUrl === 'button4') {
+            finalRedirectUrl = 'https://example.com/button4';
+        }
+        
+        // Perform the redirect
+        window.location.href = finalRedirectUrl; // For a full page reload redirect
+        // Or use Next.js router for client-side redirect (comment out the line above if using this)
+        // router.push(finalRedirectUrl);
+    }, [router.query]);
 
-  return (
-    <div>
-      <p>Redirecting...</p>
-    </div>
-  );
+    return (
+        <div>
+            <p>Redirecting...</p>
+        </div>
+    );
 }
