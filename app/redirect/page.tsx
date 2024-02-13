@@ -4,33 +4,35 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function RedirectPage() {
-    const router = useRouter();
+  const router = useRouter();
 
-    useEffect(() => {
-        // Extract the query parameter for the redirect URL
-        const { redirectUrl } = router.query;
+  useEffect(() => {
+    const { action } = router.query;
 
-        // Define default redirect URL
-        let finalRedirectUrl = 'https://folkloreinstitute.vercel.app';
+    // Perform the redirect based on the action
+    switch (action) {
+      case 'post_redirect_1':
+        window.location.href = 'https://redirect-url-for-button-1.com';
+        break;
+      case 'post_redirect_2':
+        window.location.href = 'https://redirect-url-for-button-2.com';
+        break;
+      case 'post_redirect_3':
+        window.location.href = 'https://redirect-url-for-button-3.com';
+        break;
+      case 'post_redirect_4':
+        window.location.href = 'https://redirect-url-for-button-4.com';
+        break;
+      default:
+        // Redirect to a default URL if action is not recognized
+        window.location.href = 'https://default-redirect-url.com';
+        break;
+    }
+  }, [router]);
 
-        // Check if a specific redirect URL is provided, update finalRedirectUrl accordingly
-        if (redirectUrl === 'button1') {
-            finalRedirectUrl = 'https://example.com/redirect1';
-        } else if (redirectUrl === 'button2') {
-            finalRedirectUrl = 'https://example.com/redirect2';
-        } else if (redirectUrl === 'button3') {
-            finalRedirectUrl = 'https://example.com/redirect3';
-        } else if (redirectUrl === 'button4') {
-            finalRedirectUrl = 'https://example.com/redirect4';
-        }
-
-        // Perform the redirect
-        window.location.href = finalRedirectUrl;
-    }, [router.query]); // Listening to changes in the query object
-
-    return (
-        <div>
-            <p>Redirecting...</p>
-        </div>
-    );
+  return (
+    <div>
+      <p>Redirecting...</p>
+    </div>
+  );
 }
