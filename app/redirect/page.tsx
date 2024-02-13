@@ -1,6 +1,6 @@
 // 'use client'; is no longer necessary as we will dynamically import this component where needed
 'use client';
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function RedirectPage() {
