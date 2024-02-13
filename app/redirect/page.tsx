@@ -1,3 +1,5 @@
+// 'use client'; is no longer necessary as we will dynamically import this component where needed
+
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -5,27 +7,26 @@ export default function RedirectPage() {
     const router = useRouter();
 
     useEffect(() => {
+        // Extract the query parameter for the redirect URL
         const { redirectUrl } = router.query;
-        
-        // Default redirect URL
+
+        // Define default redirect URL
         let finalRedirectUrl = 'https://folklore-cms.vercel.app';
 
-        // Choose the redirect URL based on the provided query parameter
+        // Check if a specific redirect URL is provided, update finalRedirectUrl accordingly
         if (redirectUrl === 'button1') {
-            finalRedirectUrl = 'https://example.com/button1';
+            finalRedirectUrl = 'https://example.com/redirect1';
         } else if (redirectUrl === 'button2') {
-            finalRedirectUrl = 'https://example.com/button2';
+            finalRedirectUrl = 'https://example.com/redirect2';
         } else if (redirectUrl === 'button3') {
-            finalRedirectUrl = 'https://example.com/button3';
+            finalRedirectUrl = 'https://example.com/redirect3';
         } else if (redirectUrl === 'button4') {
-            finalRedirectUrl = 'https://example.com/button4';
+            finalRedirectUrl = 'https://example.com/redirect4';
         }
-        
+
         // Perform the redirect
-        window.location.href = finalRedirectUrl; // For a full page reload redirect
-        // Or use Next.js router for client-side redirect (comment out the line above if using this)
-        // router.push(finalRedirectUrl);
-    }, [router.query]);
+        window.location.href = finalRedirectUrl;
+    }, [router.query]); // Listening to changes in the query object
 
     return (
         <div>
