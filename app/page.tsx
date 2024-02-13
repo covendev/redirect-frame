@@ -1,21 +1,34 @@
-// 'use client'; is no longer necessary as we will dynamically import this component where needed
+import { getFrameMetadata } from '@coinbase/onchainkit';
+import type { Metadata } from 'next';
+
+const frameMetadata = getFrameMetadata({
+  buttons: [
+    { label: 'Button 1', action: 'post_redirect_1' },
+    { label: 'Button 2', action: 'post_redirect_2' },
+    { label: 'Button 3', action: 'post_redirect_3' },
+    { label: 'Button 4', action: 'post_redirect_4' }
+  ],
+  image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
+  post_url: 'https://folklore-frame.netlify.app/api/frame',
+});
+
+export const metadata: Metadata = {
+  title: 'Redirect frame',
+  description: 'LFG',
+  openGraph: {
+    title: 'Redirect frame',
+    description: 'LFG',
+    images: ['https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png'],
+  },
+  other: {
+    ...frameMetadata,
+  },
+};
 
 export default function Page() {
   return (
     <>
-      <div>
-        <p>Click on a button to redirect:</p>
-        <button onClick={() => redirectTo('button1')}>Button 1</button>
-        <button onClick={() => redirectTo('button2')}>Button 2</button>
-        <button onClick={() => redirectTo('button3')}>Button 3</button>
-        <button onClick={() => redirectTo('button4')}>Button 4</button>
-      </div>
+      <img src={'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png'}/>
     </>
   );
-}
-
-function redirectTo(redirectUrl: string) {
-  // Construct the redirect URL with the query parameter for the specific button
-  const url = `/redirectpage?redirectUrl=${redirectUrl}`;
-  window.location.href = url;
 }
