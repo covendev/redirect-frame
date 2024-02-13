@@ -23,10 +23,7 @@ export default function RedirectPage() {
       case 'Membership':
         window.location.href = ' https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96';
         break;
-      default:
-        // Redirect to a default URL if action is not recognized
-        window.location.href = 'https://folkloreinstitute.netlify.app/api/frame';
-        break;
+
     }
   }, [router]);
 
