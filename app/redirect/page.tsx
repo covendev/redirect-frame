@@ -1,5 +1,5 @@
 // 'use client'; is no longer necessary as we will dynamically import this component where needed
-
+'use client';
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
