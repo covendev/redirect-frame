@@ -25,7 +25,7 @@ export default function RedirectPage() {
         break;
       default:
         // Redirect to a default URL if action is not recognized
-        window.location.href = 'https://default-redirect-url.com';
+        window.location.href = 'https://folkloreinstitute.netlify.app/api/frame';
         break;
     }
   }, [router]);
