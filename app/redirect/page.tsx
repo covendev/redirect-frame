@@ -11,16 +11,16 @@ export default function RedirectPage() {
 
     // Perform the redirect based on the action
     switch (action) {
-      case 'post_redirect_1':
+      case 'Button 1':
         window.location.href = 'https://redirect-url-for-button-1.com';
         break;
-      case 'post_redirect_2':
+      case 'Button 2':
         window.location.href = 'https://redirect-url-for-button-2.com';
         break;
-      case 'post_redirect_3':
+      case 'Button 3':
         window.location.href = 'https://redirect-url-for-button-3.com';
         break;
-      case 'post_redirect_4':
+      case 'Button 4':
         window.location.href = 'https://redirect-url-for-button-4.com';
         break;
       default:
