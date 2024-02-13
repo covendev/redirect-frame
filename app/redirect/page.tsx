@@ -11,16 +11,16 @@ export default function RedirectPage() {
 
     // Perform the redirect based on the action
     switch (action) {
-      case 'learn_redirect':
+      case 'Learn':
         window.location.href = 'https://folklore.institute';
         break;
-      case 'rss_redirect':
+      case 'RSS':
         window.location.href = 'https://entries.folklore.institute';
         break;
-      case 'telegram_redirect':
+      case 'Telegram':
         window.location.href = 'https://t.me/folklore_0x';
         break;
-      case 'membership_redirect':
+      case 'Membership':
         window.location.href = ' https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96';
         break;
 
