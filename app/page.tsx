@@ -1,7 +1,36 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+
+interface RedirectPageProps {
+  redirectUrl: string;
+}
+
+export default function RedirectPage({ redirectUrl }: RedirectPageProps) {
+    const router = useRouter();
+
+    useEffect(() => {
+        if (redirectUrl) {
+            // Perform the redirect
+            router.push(redirectUrl); // For client-side redirect
+        }
+    }, [redirectUrl, router]);
+
+    return (
+        <div>
+            <p>Redirecting...</p>
+        </div>
+    );
+}
+
 import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
 
 export default function Page() {
+  const handleButtonClick = (url: string) => {
+    // Redirect to the specified URL
+    router.push(url);
+  };
+
   const frameMetadata = getFrameMetadata({
     buttons: [
       { label: 'Learn', action: 'https://folklore.insitute' },
@@ -29,8 +58,12 @@ export default function Page() {
   return (
     <>
       <img src={frameMetadata.image} />
+      {/* Display buttons */}
+      {frameMetadata.buttons.map((button, index) => (
+        <button key={index} onClick={() => handleButtonClick(button.action)}>
+          {button.label}
+        </button>
+      ))}
     </>
   );
 }
-
-
