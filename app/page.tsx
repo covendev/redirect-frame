@@ -9,7 +9,7 @@ const frameMetadata = getFrameMetadata({
     { label: 'Membership', action: 'post_redirect' }
   ],
   image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
-  post_url: 'https://folklore-frame.netlify.app/api/frame',
+  post_url: 'https://folkloreinstitute.netlify.app/api/frame',
 });
 
 export const metadata: Metadata = {
