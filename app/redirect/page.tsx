@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { useClient } from "next/react"; // Import useClient from next/react
 
 interface RedirectPageProps {
   redirectUrl: string;
@@ -7,6 +8,7 @@ interface RedirectPageProps {
 
 export default function RedirectPage({ redirectUrl }: RedirectPageProps) {
     const router = useRouter();
+    useClient(); // Mark this component as a client-side component
 
     useEffect(() => {
         if (redirectUrl) {
