@@ -11,17 +11,17 @@ export default function RedirectPage() {
 
     // Perform the redirect based on the action
     switch (action) {
-      case 'Button 1':
-        window.location.href = 'https://redirect-url-for-button-1.com';
+      case 'Learn':
+        window.location.href = 'https://folklore.institute';
         break;
-      case 'Button 2':
-        window.location.href = 'https://redirect-url-for-button-2.com';
+      case 'RSS':
+        window.location.href = 'entries.folklore.institute';
         break;
-      case 'Button 3':
-        window.location.href = 'https://redirect-url-for-button-3.com';
+      case 'Telegram':
+        window.location.href = 'https://t.me/folklore_0x';
         break;
-      case 'Button 4':
-        window.location.href = 'https://redirect-url-for-button-4.com';
+      case 'Membership':
+        window.location.href = ' https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96';
         break;
       default:
         // Redirect to a default URL if action is not recognized
