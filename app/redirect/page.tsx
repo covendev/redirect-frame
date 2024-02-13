@@ -4,12 +4,14 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function RedirectPage() {
-  const router = useRouter() as any;
+  const router = useRouter();
 
   useEffect(() => {
     const { action } = router.query as { action: string };
 
-    // Perform the redirect based on the action
+    console.log('Received action:', action);
+
+    // Perform the redirect based on the button label
     switch (action) {
       case 'Learn':
         window.location.href = 'https://folklore.institute';
@@ -21,11 +23,13 @@ export default function RedirectPage() {
         window.location.href = 'https://t.me/folklore_0x';
         break;
       case 'Membership':
-        window.location.href = ' https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96';
+        window.location.href = 'https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96';
         break;
-
+      default:
+        // Handle default case
+        break;
     }
-  }, [router]);
+  }, [router.query]);
 
   return (
     <div>
