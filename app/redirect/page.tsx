@@ -1,6 +1,9 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
+// Mark this component as a client-side component
+export const __useClient = true;
+
 export default function RedirectPage() {
   const router = useRouter();
 
