@@ -3,10 +3,10 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-    { label: 'Button 1', action: 'post_redirect_1' },
-    { label: 'Button 2', action: 'post_redirect_2' },
-    { label: 'Button 3', action: 'post_redirect_3' },
-    { label: 'Button 4', action: 'post_redirect_4' }
+    { label: 'button1', action: 'post_redirect_1' },
+    { label: 'button2', action: 'post_redirect_2' },
+    { label: 'button3', action: 'post_redirect_3' },
+    { label: 'button4', action: 'post_redirect_4' }
   ],
   image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
   post_url: 'https://folklore-frame.netlify.app/api/frame',
