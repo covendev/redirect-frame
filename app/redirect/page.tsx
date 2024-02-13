@@ -15,7 +15,7 @@ export default function RedirectPage() {
         window.location.href = 'https://folklore.institute';
         break;
       case 'RSS':
-        window.location.href = 'entries.folklore.institute';
+        window.location.href = 'https://entries.folklore.institute';
         break;
       case 'Telegram':
         window.location.href = 'https://t.me/folklore_0x';
