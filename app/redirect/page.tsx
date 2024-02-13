@@ -11,7 +11,7 @@ export default function RedirectPage() {
         const { redirectUrl } = router.query;
 
         // Define default redirect URL
-        let finalRedirectUrl = 'https://folklore-cms.vercel.app';
+        let finalRedirectUrl = 'https://folkloreinstitute.vercel.app';
 
         // Check if a specific redirect URL is provided, update finalRedirectUrl accordingly
         if (redirectUrl === 'button1') {
