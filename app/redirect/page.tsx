@@ -1,11 +1,10 @@
-// Mark this component as a client-side component
-export const __useClient = true;
-
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { useClient } from 'next/client';
 
 export default function RedirectPage() {
   const router = useRouter();
+  useClient(); // Mark this component as a client-side component
 
   useEffect(() => {
     const { action } = router.query;
