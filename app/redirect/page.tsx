@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function RedirectPage() {
-  const router = useRouter();
+  const router = useRouter() as any;
 
   useEffect(() => {
-    const { action } = router.query;
+    const { action } = router.query as { action: string };
 
     // Perform the redirect based on the action
     switch (action) {
