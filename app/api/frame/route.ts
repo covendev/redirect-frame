@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
-  // Assuming the 'action' is extracted from the request body
-  const { action } = await req.body.json();
+  // Check if req.body is null before attempting to access its properties
+  const body = req.body ? await req.body.json() : null;
+
+  // Extract the action from the body
+  const action = body?.action;
 
   // Perform the redirect based on the action
   switch (action) {
