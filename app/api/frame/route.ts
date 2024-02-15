@@ -6,7 +6,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   // Parse the request body as JSON
   try {
     if (req.body) {
-      const body = await req.body.json();
+      const bodyText = await req.body.text();
+      const body = JSON.parse(bodyText);
 
       // Extract the action from the body
       action = body.action;
