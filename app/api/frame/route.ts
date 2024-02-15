@@ -1,11 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
-  // Check if req.body is null before attempting to access its properties
-  const body = req.body ? await req.body.json() : null;
+  let action = 'default'; // Default action
 
-  // Extract the action from the body
-  const action = body?.action;
+  // Parse the request body as JSON
+  try {
+    const body = await req.body.json();
+
+    // Extract the action from the body
+    action = body.action;
+  } catch (error) {
+    console.error('Error parsing request body:', error);
+  }
 
   // Perform the redirect based on the action
   switch (action) {
