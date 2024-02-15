@@ -1,18 +1,16 @@
-// 'use client'; is no longer necessary as we will dynamically import this component where needed
 'use client';
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function RedirectPage() {
-  const router = useRouter() as any;
+  const router = useRouter();
 
   useEffect(() => {
     const { action } = router.query as { action: string };
-    
 
     console.log('Received action:', action);
 
-    // Perform the redirect based on the button label
+    // Perform the redirect based on the action
     switch (action) {
       case 'Learn':
         window.location.href = 'https://folklore.institute';
