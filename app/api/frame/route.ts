@@ -5,10 +5,14 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   // Parse the request body as JSON
   try {
-    const body = await req.body.json();
+    if (req.body) {
+      const body = await req.body.json();
 
-    // Extract the action from the body
-    action = body.action;
+      // Extract the action from the body
+      action = body.action;
+    } else {
+      console.error('Request body is null.');
+    }
   } catch (error) {
     console.error('Error parsing request body:', error);
   }
