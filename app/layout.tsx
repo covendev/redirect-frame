@@ -6,7 +6,20 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* First line of buttons */}
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <button style={{ marginRight: '10px' }}>Button 1</button>
+          <button style={{ marginRight: '10px' }}>Button 2</button>
+        </div>
+        {/* Second line of buttons */}
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <button style={{ marginRight: '10px' }}>Button 3</button>
+          <button>Button 4</button>
+        </div>
+        {/* Render children */}
+        {children}
+      </body>
     </html>
   );
 }
