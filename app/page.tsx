@@ -1,9 +1,3 @@
-// Define the Button type
-type Button = {
-  label: string;
-  action: "post_redirect" | "post" | "link" | undefined; // Updated to include "link"
-  target?: string; // Optional target property
-};
 
 // Import necessary modules
 import { getFrameMetadata } from '@coinbase/onchainkit';
