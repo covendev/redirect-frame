@@ -12,7 +12,12 @@ import type { Metadata } from 'next';
 // Define frameMetadata using getFrameMetadata function
 const frameMetadata = getFrameMetadata({
   buttons: [
-    { label: 'Learn!', action: 'post_redirect' },
+    {
+      action: 'link',
+      label: 'Learn',
+      target: 'https://folklore.institute',
+    },
+
     {
       action: 'link',
       label: 'RSS',
