@@ -1,8 +1,18 @@
+import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit';
 import { NextRequest, NextResponse } from 'next/server';
+import { NEXT_PUBLIC_URL } from '../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
-  return NextResponse.redirect('https://folklore-frame.netlify.app/redirect', {status: 302});
-}
+  let accountAddress: string | undefined = '';
+  let text: string | undefined = '';
+
+  const body: FrameRequest = await req.json();
+  const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
+
+  if (isValid) {
+    accountAddress = message.interactor.verified_accounts[0];
+  }
+
 
 export async function POST(req: NextRequest): Promise<Response> {
   return getResponse(req);
