@@ -3,7 +3,22 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-      {label: 'Join the Lore!', action: 'post_redirect'}
+      {label: 'Learn!', action: 'post_redirect'},
+      {
+      action: 'link',
+      label: 'RSS',
+      target: 'https://entries.folklore.institute',
+    },
+    {
+      action: 'link',
+      label: 'Telegram',
+      target: 'https://t.me/folklore_0x',
+    },
+    {
+      action: 'link',
+      label: 'Membership',
+      target: 'https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96',
+    },
   ],
   image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
   post_url: 'https://folklore-frame.netlify.app/api/frame',
