@@ -3,10 +3,26 @@ import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
-    { label: 'Learn', action: 'post_redirect' },            // Updated action values
-    { label: 'RSS', action: 'post_redirect' },                // Updated action values
-    { label: 'Telegram', action: 'post_redirect' },      // Updated action values
-    { label: 'Membership', action: 'post_redirect' },  // Updated action values
+    {
+      action: 'link',
+      label: 'Learn',
+      target: 'https://folklore.institute',
+    },
+    {
+      action: 'link',
+      label: 'RSS',
+      target: 'https://entries.folklore.institute',
+    },
+    {
+      action: 'link',
+      label: 'Telegram',
+      target: 'https://t.me/folklore_0x',
+    },
+    {
+      action: 'link',
+      label: 'Membership',
+      target: 'https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96',
+    },
   ],
   image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
   post_url: 'https://folkloreinstitute.netlify.app/api/frame',
