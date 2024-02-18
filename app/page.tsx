@@ -1,10 +1,19 @@
+// Define the Button type
+type Button = {
+  label: string;
+  action: "post_redirect" | "link";
+  target?: string; // Optional target property
+};
+
+// Import necessary modules
 import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
 
+// Define frameMetadata using getFrameMetadata function
 const frameMetadata = getFrameMetadata({
   buttons: [
-      {label: 'Learn!', action: 'post_redirect'},
-      {
+    { label: 'Learn!', action: 'post_redirect' },
+    {
       action: 'link',
       label: 'RSS',
       target: 'https://entries.folklore.institute',
@@ -24,6 +33,7 @@ const frameMetadata = getFrameMetadata({
   post_url: 'https://folklore-frame.netlify.app/api/frame',
 });
 
+// Define metadata object with type Metadata
 export const metadata: Metadata = {
   title: 'Redirect frame',
   description: 'LFG',
@@ -37,6 +47,7 @@ export const metadata: Metadata = {
   },
 };
 
+// Define Page component
 export default function Page() {
   return (
     <>
