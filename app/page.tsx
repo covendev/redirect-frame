@@ -1,7 +1,7 @@
 // Define the Button type
 type Button = {
   label: string;
-  action: "post_redirect" | "link";
+  action: "post_redirect" | "post" | "link" | undefined; // Updated to include "link"
   target?: string; // Optional target property
 };
 
