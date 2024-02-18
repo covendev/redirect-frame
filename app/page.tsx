@@ -8,7 +8,8 @@ type Button = {
 // Import necessary modules
 import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
-import { NEXT_PUBLIC_URL } from './config';
+import { NEXT_PUBLIC_URL } from "./redirect/config";
+
 // Define frameMetadata using getFrameMetadata function
 const frameMetadata = getFrameMetadata({
   buttons: [
