@@ -1,6 +1,6 @@
 
 // Import necessary modules
-import { getFrameMetadata } from "@coinbase/onchainkit": "0.6.2";
+import { getFrameMetadata } from "@coinbase/onchainkit";
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from "./redirect/config";
 
