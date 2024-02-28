@@ -20,8 +20,8 @@ const frameMetadata = getFrameMetadata({
     },
     {
       action: 'link',
-      label: 'Telegram',
-      target: 'https://t.me/folklore_0x',
+      label: 'Members Chat',
+      target: 'https://warpcast.com/~/group/otMuwzw78EfpcBp-sKWjFw',
     },
     {
       action: 'link',
