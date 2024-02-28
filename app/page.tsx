@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Redirect frame',
     description: 'LFG',
-    images: ['https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png'],
+    images: ['https://folkloreinstitute.netlify.app/api/folklore.jpeg'],
   },
   other: {
     ...frameMetadata,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <img src={'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png'}/>
+      <img src={'/folklore.jpeg'}/>
     </>
   );
 }
