@@ -29,7 +29,7 @@ const frameMetadata = getFrameMetadata({
       target: 'https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96',
     },
   ],
-  image: 'https://images.mirror-media.xyz/publication-images/yvayTwllxkEx4rX63mYhO.png',
+  image: 'https://folkloreinstitute.netlify.app/api/folklore.jpeg',
   post_url: 'https://folkloreinstitute.netlify.app/api/frame',
 });
 
