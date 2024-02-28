@@ -29,7 +29,7 @@ const frameMetadata = getFrameMetadata({
       target: 'https://zora.co/collect/oeth:0x2451761fed91d394ad6ba01215f8b46abe70fc96',
     },
   ],
-  image: 'https://folkloreinstitute.netlify.app/api/folklore.jpeg',
+  image: 'https://folkloreinstitute.netlify.app/folklore.jpeg',
   post_url: 'https://folkloreinstitute.netlify.app/api/frame',
 });
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Redirect frame',
     description: 'LFG',
-    images: ['https://folkloreinstitute.netlify.app/api/folklore.jpeg'],
+    images: ['https://folkloreinstitute.netlify.app/folklore.jpeg'],
   },
   other: {
     ...frameMetadata,
